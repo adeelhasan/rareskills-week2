@@ -1,0 +1,22 @@
+{
+  "name": "week2",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-foundry": "^1.0.0"
+  },
+  "dependencies": {
+    "@openzeppelin/merkle-tree": "^1.0.2"
+  }
+}
