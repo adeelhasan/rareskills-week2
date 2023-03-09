@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/interfaces/IERC2981.sol";
 
-contract NFTMerkleTreePreSale is ERC721, Ownable, IERC2981 {
+contract MerkleTreePreSale is ERC721, Ownable, IERC2981 {
     bytes32 private _root;
     uint256 private constant PRESALE_DISCOUNT = 2500; // 25% discount
     uint256 private constant MINTING_PRICE = 0.001 ether;
@@ -46,6 +46,14 @@ contract NFTMerkleTreePreSale is ERC721, Ownable, IERC2981 {
             _preSaleParticipationBitmap |= (1 << bitmapIndex);
         else
             _hasParticipatedInPreSaleMapping[msg.sender] = 1;
+    }
+
+    function checkParticipationBitmap(uint256 bitmapIndex) public view returns (bool) {
+        return _preSaleParticipationBitmap & (1 << bitmapIndex) == 0;
+    }
+
+    function checkParticipationMapping(address user) public view returns (bool) {
+        return _hasParticipatedInPreSaleMapping[user] == 0;
     }
 
     /// @notice handy for previewing the price for pre-sale
