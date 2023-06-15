@@ -61,10 +61,10 @@ contract Staker {
     }
 
     function onERC721Received(
-        address operator,
+        address,
         address from,
         uint256 tokenId,
-        bytes calldata data
+        bytes calldata
     ) external returns (bytes4) {
         require(msg.sender == address(nftToken), "not our NFT");
         require(msg.sender != address(this), "cannot stake for yourself");

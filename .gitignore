@@ -9,4 +9,11 @@ out/
 
 # Dotenv file
 .env
+
+#node
 node_modules
+
+#hardhat
+/artifacts
+/cache_hardhat
+/node_modules

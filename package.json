@@ -1,6 +1,5 @@
 {
   "name": "week2",
-  "type": "module",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -14,7 +13,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@nomicfoundation/hardhat-foundry": "^1.0.0"
+    "@nomicfoundation/hardhat-foundry": "^1.0.1",
+    "@nomicfoundation/hardhat-verify": "^1.0.1",
+    "@nomiclabs/hardhat-ethers": "^2.0.0",
+    "@openzeppelin/hardhat-upgrades": "^1.27.0",
+    "chai": "^4.3.7",
+    "ethers": "^5.0.5",
+    "hardhat": "^2.15.0"
   },
   "dependencies": {
     "@openzeppelin/merkle-tree": "^1.0.2"
